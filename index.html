@@ -33,16 +33,12 @@ function playerChoice () {
 }
 
 function game (){
+
+    for(i = 0; i < 5; i++){
     playRound(computerChioce(),playerChoice());
     console.log(`Computer: ${cscore} Player: ${pscore}`)
-    playRound(computerChioce(),playerChoice());
-    console.log(`Computer: ${cscore} Player: ${pscore}`)
-    playRound(computerChioce(),playerChoice());
-    console.log(`Computer: ${cscore} Player: ${pscore}`)
-    playRound(computerChioce(),playerChoice());
-    console.log(`Computer: ${cscore} Player: ${pscore}`)
-    playRound(computerChioce(),playerChoice());
-    console.log(`Computer: ${cscore} Player: ${pscore}`)
+    
+    }
 }
 
 
