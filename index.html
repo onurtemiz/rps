@@ -1,0 +1,55 @@
+<script>
+
+let cscore = 0;
+let pscore = 0;
+
+function computerChioce () {  
+    let options = ["Rock","Paper","Scissors"]
+
+   return options[Math.floor(Math.random() * options.length)]
+}
+
+function playRound (c,p) {
+    if (c == "Rock" && p == "Paper"){
+        pscore++;
+    }else if (c == "Rock" && p == "Scissors"){
+        cscore++;
+    }else if (c == "Paper" && p == "Rock"){
+        cscore++;
+    }else if (c == "Paper" && p == "Scissors"){
+        pscore++;
+    }else if (c == "Scissors" && p == "Rock"){
+        pscore++;
+    }else if (c == "Scissors" && p == "Paper"){
+        cscore++;
+    }
+}
+
+function playerChoice () {
+    let answer = window.prompt("Rock, Paper, Scissors ?");
+    answer = answer.toLowerCase();
+    let choice = answer.charAt(0).toUpperCase() + answer.slice(1);
+    return choice
+}
+
+function game (){
+    playRound(computerChioce(),playerChoice());
+    console.log(`Computer: ${cscore} Player: ${pscore}`)
+    playRound(computerChioce(),playerChoice());
+    console.log(`Computer: ${cscore} Player: ${pscore}`)
+    playRound(computerChioce(),playerChoice());
+    console.log(`Computer: ${cscore} Player: ${pscore}`)
+    playRound(computerChioce(),playerChoice());
+    console.log(`Computer: ${cscore} Player: ${pscore}`)
+    playRound(computerChioce(),playerChoice());
+    console.log(`Computer: ${cscore} Player: ${pscore}`)
+}
+
+
+game()
+
+
+
+
+
+</script>
