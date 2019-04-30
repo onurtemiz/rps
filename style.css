@@ -1,0 +1,37 @@
+#rock, #paper, #scissors {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    top: 200px;
+}
+#paper {
+    left: 375px;
+
+}
+#rock {
+    left: 600px;
+}
+#scissors {
+    left: 825px;
+}
+button {
+    font-size: 30px;
+    background: none;
+    height: 200px;
+    width: 200px;
+    color: white;
+}
+
+#rockb {
+  background-color: blue;
+
+}
+#paperb {
+    background-color: blue;
+
+}
+#scissorsb {
+    background-color: blue;
+
+}

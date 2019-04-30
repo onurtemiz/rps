@@ -1,51 +1,19 @@
-<script>
-
-let cscore = 0;
-let pscore = 0;
-
-function computerChioce () {  
-    let options = ["Rock","Paper","Scissors"]
-
-   return options[Math.floor(Math.random() * options.length)]
-}
-
-function playRound (c,p) {
-    if (c == "Rock" && p == "Paper"){
-        pscore++;
-    }else if (c == "Rock" && p == "Scissors"){
-        cscore++;
-    }else if (c == "Paper" && p == "Rock"){
-        cscore++;
-    }else if (c == "Paper" && p == "Scissors"){
-        pscore++;
-    }else if (c == "Scissors" && p == "Rock"){
-        pscore++;
-    }else if (c == "Scissors" && p == "Paper"){
-        cscore++;
-    }
-}
-
-function playerChoice () {
-    let answer = window.prompt("Rock, Paper, Scissors ?");
-    answer = answer.toLowerCase();
-    let choice = answer.charAt(0).toUpperCase() + answer.slice(1);
-    return choice
-}
-
-function game (){
-
-    for(let i = 0; i < 5; i++){
-    playRound(computerChioce(),playerChoice());
-    console.log(`Computer: ${cscore} Player: ${pscore}`)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
     
-    }
-}
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="rock"><button id="rockb">Rock</button></div>
+    <div id="paper"><button id="paperb">Paper</button></div>
+    <div id="scissors"><button id="scissorsb">Scissors</button></div>
+    <div id="pscore">Oyuncu Skoru: 0</div>
+    <div id="cscore">Bilgisayar Skoru: 0</div>
+    <div id="playerChoice"></div>
+    <div id="computerChoice"></div>
+</body>
+<script type="text/javascript" src="script.js"></script>
 
-
-game()
-
-
-
-
-
-</script>
+</html>
